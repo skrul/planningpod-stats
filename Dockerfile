@@ -22,7 +22,6 @@ RUN poetry bundle venv --python=/usr/bin/python3 --only=main /venv
 RUN crontab crontab
 
 
-#CMD ["cron", "-f"]
-
-ENTRYPOINT ["/venv/bin/planningpod-stats"]
+CMD ["cron", "-f"]
+#ENTRYPOINT ["/venv/bin/planningpod-stats"]
 #ENTRYPOINT ["tail", "-f", "/dev/null"]
