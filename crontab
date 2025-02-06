@@ -1,1 +1,2 @@
-* * * * * /venv/bin/planningpod-stats >> /logfile
+# Run one minute after every hour
+1 * * * * /venv/bin/planningpod-stats >> /logfile

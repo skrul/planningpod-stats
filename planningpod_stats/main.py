@@ -61,6 +61,10 @@ def update_sheet(number):
 @click.command()
 def main():
     """Fetch the number of idle leads and update the Google Sheet."""
+    # Check if current time is within midnight hour (00:00-00:59) PST/PDT
+    current_time = datetime.now(tz=ZoneInfo('America/Los_Angeles'))
+    if current_time.hour != 0:
+        return
     number = fetch_number_from_webpage()
     click.echo(f"Found {number} idle leads")
     update_sheet(number)
