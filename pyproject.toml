@@ -1,0 +1,19 @@
+[tool.poetry]
+name = "planningpod-stats"
+version = "0.1.0"
+description = ""
+authors = ["Steve Krulewitz <skrulx@gmail.com>"]
+
+[tool.poetry.dependencies]
+python = "^3.8"
+click = "^8.1.0"
+requests = "^2.32.3"
+google-api-python-client = "^2.160.0"
+python-dotenv = "^1.0.1"
+
+[tool.poetry.scripts]
+planningpod-stats = "planningpod_stats.main:main"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"

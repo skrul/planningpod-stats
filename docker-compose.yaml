@@ -1,0 +1,8 @@
+services:
+  planningpod_stats:
+    build: 
+      context: .
+    volumes:
+      - ./.env:/.env
+      - ./credentials.json:/credentials.json
+    restart: unless-stopped
